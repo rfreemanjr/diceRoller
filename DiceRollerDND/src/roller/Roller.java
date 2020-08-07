@@ -6,30 +6,38 @@ package roller;
  * @author Ronney Freeman
  * 
  * This class aims to replicate dice rolling for the game
- * Dungeons and dragons
+ * Dungeons and dragons and should be able to accommodate 
+ * any number dice both in and out of the game itself.
+ * Most of this code assumes the reader/user is familiar
+ * with Dungeons and dragons terminology and mechanics.
+ * 
  *
  */
 public class Roller {
+	/* the amount of dice being rolled */
 	private int diceAmount;
+	/* The type of dice being rolled */
 	private int diceType;
+	/* If the roll has advantage or not */
 	private boolean adv;
+	/* If the roll has disadvantage */
 	private boolean disAdv;
+	/* If the dice need a modifier to the roll */
 	private int mod;
+	/* The minimum dice value */
 	private static final int MIN = 1;
+	/*The maximum dice value */
 	private int max = 0;
-
-//	public roller(int diceAmount, int diceType, boolean adv, boolean disAdv, int mod) {
-//		setDiceAmount(diceAmount);
-//		setDiceType(diceType);
-//		setAdv(adv);
-//		setDisAdv(disAdv);
-//		setMod(mod);
-//	}
 	
-	public Roller() {
-		
-	}
-	
+	/**
+	 * 
+	 * This method returns a value associated with the dice roll
+	 * and also the the amount of dice the player wishes to roll 
+	 * of the said dice.
+	 * @param amount this is the amount of dice rolled
+	 * @param type the dice of dice being rolled
+	 * @return the total of the dice roll
+	 */
 	public int diceRoll(int amount, int type) {
 		this.diceAmount = amount;
 		this.diceType = type;

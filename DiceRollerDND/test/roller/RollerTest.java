@@ -38,7 +38,15 @@ public class RollerTest {
 		iteratorChecking(dice, d8);
 		iteratorChecking(dice, d20);
 		}
-	
+	/**
+	 * 
+	 * iteratorChecking method.
+	 * This method goes through 25 different rolls of the test dice
+	 * to verify and check for possible outliers and will return 
+	 * a failure if an outlier is detected.
+	 * @param diceTest The test Dice
+	 * @param diceType The associated test Dice type.
+	 */
 	public void iteratorChecking(Roller diceTest, int diceType) {
 		for (int i = 0; i < 25; i++) {
 			numTest = diceTest.diceRoll(4, diceType);
