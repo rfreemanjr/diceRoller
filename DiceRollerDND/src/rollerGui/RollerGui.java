@@ -54,12 +54,12 @@ public class RollerGui implements ActionListener{
 		button.addActionListener(this);
 		panel = new JPanel();
 		resultLabel = new JLabel("0");
-		chooseDice = new JLabel("Roll the dice!");
+//		chooseDice = new JLabel(" ");
 		panel.setBorder(BorderFactory.createEmptyBorder(200, 200, 200, 200));
 		panel.setLayout(new GridLayout(2, 3));
-		panel.add(selectDice);
 		panel.add(amountDice);
-		panel.add(chooseDice);
+		panel.add(selectDice);
+//		panel.add(chooseDice);
 		panel.add(button);
 		panel.add(resultLabel);
 		//Sets the frame up
