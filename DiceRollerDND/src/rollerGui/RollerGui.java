@@ -21,6 +21,10 @@ import roller.Roller;
  * AUG 7 NOTE:
  *  -This current iteration of the GUI is based on a video tutorial
  *  so it may appear VERY boiler-platey
+ *  
+ *  AUG 13 NOTE:
+ *  Some changes were made, so it shouldn't look as boiler-platey as before, but still
+ *  has something similar with a bunch of simple Java guis out there.
  *
  */
 public class RollerGui implements ActionListener{
