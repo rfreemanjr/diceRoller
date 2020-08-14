@@ -60,7 +60,7 @@ public class RollerGui implements ActionListener{
 		resultLabel = new JLabel("0");
 		chooseDice = new JLabel("Type of Dice");
 		chooseAmount = new JLabel("# of Dice");
-		panel.setBorder(BorderFactory.createEmptyBorder(200, 200, 200, 200));
+		panel.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
 		panel.setLayout(new GridLayout(3, 0));
 		panel.add(chooseAmount);
 		panel.add(chooseDice);
