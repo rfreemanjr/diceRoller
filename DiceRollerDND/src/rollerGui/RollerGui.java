@@ -39,18 +39,17 @@ public class RollerGui implements ActionListener{
 	private int[] diceTypeInt = {4, 6, 8, 10, 12, 20};
 	private String[] diceTypeString = {"D4", "D6", "D8", "D10", "D12", "D20"};
 	private String[] diceAmountString = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
-	private JComboBox amountDice;
-	private JComboBox selectDice;
-	private JComboBox selectDiceString;
+	private JComboBox<String> amountDice;
+	private JComboBox<String> selectDice;
 	/**
 	 * This gui is a simple gui to provide direct user control for
 	 * a simple dice rolling mechanic.
 	 * RollerGui.java's constructor.
 	 */
 	public RollerGui() {
-		amountDice = new JComboBox(diceAmountString);
+		amountDice = new JComboBox<String>(diceAmountString);
 		amountDice.setSelectedIndex(9);
-		selectDice = new JComboBox(diceTypeString);
+		selectDice = new JComboBox<String>(diceTypeString);
 		selectDice.setSelectedIndex(5);
 		
 		frame = new JFrame();
