@@ -34,6 +34,7 @@ public class RollerGui implements ActionListener{
 	private JPanel panel;
 	private JLabel resultLabel;
 	private JLabel chooseDice;
+	private JLabel chooseAmount;
 	private int[] diceAmountInt = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	private int[] diceTypeInt = {4, 6, 8, 10, 12, 20};
 	private String[] diceTypeString = {"D4", "D6", "D8", "D10", "D12", "D20"};
@@ -58,12 +59,14 @@ public class RollerGui implements ActionListener{
 		button.addActionListener(this);
 		panel = new JPanel();
 		resultLabel = new JLabel("0");
-//		chooseDice = new JLabel(" ");
+		chooseDice = new JLabel("Type of Dice");
+		chooseAmount = new JLabel("# of Dice");
 		panel.setBorder(BorderFactory.createEmptyBorder(200, 200, 200, 200));
-		panel.setLayout(new GridLayout(2, 3));
+		panel.setLayout(new GridLayout(3, 0));
+		panel.add(chooseAmount);
+		panel.add(chooseDice);
 		panel.add(amountDice);
 		panel.add(selectDice);
-//		panel.add(chooseDice);
 		panel.add(button);
 		panel.add(resultLabel);
 		//Sets the frame up
