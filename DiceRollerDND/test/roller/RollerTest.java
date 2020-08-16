@@ -5,27 +5,31 @@ import org.junit.Test;
 
 public class RollerTest {
 	private int numTest;
+	private static final Roller DICE = new Roller();
+	private static final int COIN = 2;
+	private static final int D4 = 4;
+	private static final int D8 = 8;
+	private static final int D20 = 20;
+	/* Input for a single dice */
+	private static final int SINGLE_DICE = 1;
+	/* This is used to assert the  dice amount for a single dice works */
+	private static final int SINGLE_TEST = 1;
+	
 	
 	@Test
 	public void rollTest() {
-		int coin = 2;
-		int d4 = 4;
-		int d8 = 8;
-		int d20 = 20;
 		int numTest;
 		//Checking the minimum value
 		assertEquals(1,Roller.getMin());
-		//Creating testing dice
-		Roller dice = new Roller();
 		/**
 		 * The next series of tests verify the integrity of the code for
 		 * the above coin and proceeding dice rolls.
 		 */
-		dice.diceRoll(1, coin);
-		assertEquals(dice.getDiceAmount(), 1);
-		assertEquals(dice.getDiceType(), 2);
-		int twoTest = dice.diceRoll(1, 2);
-		if (twoTest > 2 || twoTest < 1) {
+		DICE.diceRoll(SINGLE_DICE, COIN);
+		assertEquals(DICE.getDiceAmount(), SINGLE_TEST);
+		assertEquals(DICE.getDiceType(), COIN);
+		int coinTest = DICE.diceRoll(SINGLE_DICE, COIN);
+		if (coinTest > 2 || coinTest < 1) {
 			fail();
 		}
 		
@@ -33,10 +37,10 @@ public class RollerTest {
 		 * These next tests utilize the iteratorChecking 
 		 * method to verify nothing too high or too low is being rolled
 		 */
-		iteratorChecking(dice, coin);
-		iteratorChecking(dice, d4);
-		iteratorChecking(dice, d8);
-		iteratorChecking(dice, d20);
+		iteratorChecking(DICE, COIN);
+		iteratorChecking(DICE, D4);
+		iteratorChecking(DICE, D8);
+		iteratorChecking(DICE, D20);
 		}
 	/**
 	 * 
