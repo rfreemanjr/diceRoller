@@ -18,13 +18,11 @@ public class RollerTest {
 	
 	@Test
 	public void rollTest() {
-		int numTest;
 		//Checking the minimum value
 		assertEquals(1,Roller.getMin());
-		/**
-		 * The next series of tests verify the integrity of the code for
-		 * the above coin and proceeding dice rolls.
-		 */
+		// The next series of tests verify the integrity of the code for
+		// the above coin and proceeding dice rolls.
+		
 		DICE.diceRoll(SINGLE_DICE, COIN);
 		assertEquals(DICE.getDiceAmount(), SINGLE_TEST);
 		assertEquals(DICE.getDiceType(), COIN);
