@@ -28,7 +28,8 @@ public class Roller {
 	private static final int MIN = 1;
 	/*The maximum dice value */
 	private int max = 0;
-	
+	/*Initial roll value for dice */
+	private int roll = 0;
 	/**
 	 * 
 	 * This method returns a value associated with the dice roll
@@ -39,14 +40,30 @@ public class Roller {
 	 * @return the total of the dice roll
 	 */
 	public int diceRoll(int amount, int type) {
-		this.diceAmount = amount;
-		this.diceType = type;
-		int roll = 0;
+		setDiceAmount(amount);
+		setDiceType(type);
 		setMax(diceType);
+		setRoll();
 	    for (int i = 0; i < diceAmount; i++) {
 	    	roll += (int)(Math.random() * (max - MIN + 1) + MIN);
 		}
 		return roll;
+	}
+	/**
+	 * Gets the roll
+	 * @return the roll
+	 */
+	public int getRoll() {
+		return roll;
+	}
+	/**
+	 * Sets the roll
+	 * Specifically, this setter will always reset the roll
+	 * to 0 in order to re-use the diceRoller.
+	 * @param roll the roll that will be set
+	 */
+	public void setRoll() {
+		this.roll = 0;
 	}
 	/**
 	 * Gets the min

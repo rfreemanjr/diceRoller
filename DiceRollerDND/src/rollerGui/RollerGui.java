@@ -79,10 +79,10 @@ public class RollerGui implements ActionListener{
 	public static void main(String[] args) {
 		new RollerGui();
 	}
-	/**
-	 * This will roll the dice as per the users clicks on the appropriate
-	 * indices provided.
-	 */
+	
+	//This will roll the dice as per the users clicks on the appropriate
+	//indices provided.
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		int diceType = diceTypeInt[selectDice.getSelectedIndex()];
